@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express 				= require("express"),
 	app 					= express(),
 	mongoose 				= require("mongoose"),
@@ -10,7 +11,7 @@ var express 				= require("express"),
 	flash 					= require("connect-flash"),
 	dotenv 					= require("dotenv");
 
-mongoose.connect("mongodb://localhost:27017/podcast_db", {useNewUrlParser: true, useUnifiedTopology: true}, ()=>{
+mongoose.connect(process.env.ClOUD_MONGODB, {useNewUrlParser: true, useUnifiedTopology: true}, ()=>{
 	console.log("db Connected");
 });
 
