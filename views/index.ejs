@@ -1,0 +1,34 @@
+<%- include('partials/header')-%>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+     
+</lottie-player>
+    </div>
+    <div class="col-md-4">
+    <br><br>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>Login</strong></h3></div>
+            <div class="panel-body">
+                <form action="/podcast/login" method="POST" role="form" id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Email</label>
+                        <input type="email" name="username"  class="form-control" placeholder="email">
+                      </div>
+                      <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" name="password" class="form-control" id="userPassword" placeholder="password">
+                      </div>
+                      <button type="submit" class="btn btn-sm btn-default">Sign in</button>
+                      <a class="btn btn-sm btn-default pull-right" href="/podcast/register">Sign up</a>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+

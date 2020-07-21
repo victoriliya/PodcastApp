@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoolPodcast</title>
+	<link rel="stylesheet" href="/css/semantic.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/style.css">
+		
+
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+	</script>
+
+</head>
+<body>
+
+
+
+	<div class="ui fixed segment menu">
+
+		<a class="active item" href="/podcast">CoolPodcast</a> 
+	  
+	  <div class="ui right secondary menu">
+	  	
+	  		<div class="menu">
+			<%if(!currentUser){%>
+		  		<a class="item" href="/podcast/register">Register</a>
+		  		<a class="item" href="/podcast/login">Login</a>
+			<%}else if(currentUser.username == "admin@mail.com"){%>
+				<a class="item" href="/podcast/new/<%=currentUser.id%>">New </a>
+				<a class="item" href="#"><%=currentUser.username%> </a>
+				<a class="item" href="/podcast/logout">Logout</a>
+			<% }else {%>
+				<a class="item" href="#"><%=currentUser.username%> </a>
+				<a class="item" href="/podcast/logout">Logout</a>
+			<% }%>
+	  		</div>
+	    	
+	  </div>
+
+
+	</div>
+
+
+	<br><br>
+	<br><br>
+
+	<div class="container">
+	<%if(error && error.length > 0){%> 
+		<div class="alert alert-danger" role="alert"><p><%= error %></p></div>
+	<%}%>
+	<%if(success && success.length > 0){%>
+		<div class="alert alert-success" role="alert"><p><%= success %></p></div>
+	<%}%>
+	</div>
+
+
+	
+

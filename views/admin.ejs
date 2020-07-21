@@ -1,0 +1,43 @@
+<%- include('partials/header')-%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    <br><br>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>Login</strong></h3></div>     
+            <%for (var i = 0; i < podcastData.length; i++) {%>
+            
+            <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-10">
+                      <div class="ui top attached tabular menu">
+                        <a class="active item">
+                          <%=podcastData[i].title%>
+                        </a>
+                        <a class="item">
+                          #<%=podcastData[i].tag%>
+                        </a>
+                        
+                      </div>
+                      <div>
+                      <br>
+                        <%=podcastData[i].description%>
+                     </div>
+                  
+                  </div>
+
+                  <div class="col-md-2"><img class="ui medium circular image" src="/images/img1.png">
+                  </div>                
+                </div> 
+                <a class="btn btn-sm btn-default pull-left" href="/podcast/edit/<%=podcastData[i].id%>">Edit</a>   
+            </div>
+        <%}%>
+
+            </div>
+                      
+        </div>
+    </div>
+  </div>
+</div>
+
