@@ -12,7 +12,7 @@ npm install all dependencies
 
 
 ## Usage
-1. Create an admin in the registration page the email/username MUST be "admin@mail.com" pick a password
+1. Create an admin in the registration page the email/username MUST be "admin@mail.com" And password is “1111”
 2. On created the admin you'll be redirected to the admin page 
 3. You can create podcast by clicking New button on the navbar then you provide "Title" , "Tag, "Description", and "File" for your podcast
 4. A user(not admin) can only view your podcast by registration using a valid email format
